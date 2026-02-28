@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jean Claude Somda — Étudiant Réseaux & Systèmes à l'IFOAD, développeur Python/Java, certifié Microsoft Bureautique & SEINAR IA/Quantique.">
+  <title>Jean Claude Somda | Réseaux & Systèmes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+  <div id="progress-bar"></div>
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ================================================ NAVIGATION ================================================ -->
+  <nav id="main-nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">JC<span>Somda</span></a>
+      <ul class="nav-links">
+        <li><a href="#home"     class="lang" data-fr="Accueil"   data-en="Home">Accueil</a></li>
+        <li><a href="#about"    class="lang" data-fr="À Propos"  data-en="About">À Propos</a></li>
+        <li><a href="#skills"   class="lang" data-fr="Expertise" data-en="Skills">Expertise</a></li>
+        <li><a href="#projects" class="lang" data-fr="Projet" data-en="Projet">Projet</a></li>
+        <li><a href="#parcours" class="lang" data-fr="Parcours"  data-en="Journey">Parcours</a></li>
+        <li><a href="#contact"  class="lang" data-fr="Contact"   data-en="Contact">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="lang-switch" aria-label="Changer la langue">EN</button>
+        <button id="theme-toggle" aria-label="Changer le thème"><i class="fas fa-circle-half-stroke"></i></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home"     class="lang" data-fr="Accueil"   data-en="Home">Accueil</a>
+    <a href="#about"    class="lang" data-fr="À Propos"  data-en="About">À Propos</a>
+    <a href="#skills"   class="lang" data-fr="Expertise" data-en="Skills">Expertise</a>
+    <a href="#projects" class="lang" data-fr="Projet" data-en="Projet">Projet</a>
+    <a href="#parcours" class="lang" data-fr="Parcours"  data-en="Journey">Parcours</a>
+    <a href="#contact"  class="lang" data-fr="Contact"   data-en="Contact">Contact</a>
+  </div>
+
+  <!-- ================================================ HERO ================================================ -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-circle" style="font-size:.45rem;color:#4ade80;"></i>
+        <span class="lang" data-fr="Disponible pour collaboration" data-en="Open for collaboration">Disponible pour collaboration</span>
+      </div>
+      <div class="profile-wrapper">
+        <img src="image/jc.png" alt="Jean Claude Somda" class="profile-img">
+        <div class="profile-ring"></div>
+      </div>
+      <h1 class="hero-name">Winzew Jean-Claude <strong>Somda</strong></h1>
+      <p class="hero-tagline">
+        <span class="lang" data-fr="Réseaux & Systèmes" data-en="Networks & Systems">Réseaux & Systèmes</span>
+        &nbsp;·&nbsp;
+        <span class="lang" data-fr="Développement" data-en="Development">Développement</span>
+        &nbsp;·&nbsp;
+        <span>IFOAD — Univ. Ki-Zerbo</span>
+      </p>
+      <p class="hero-quote lang"
+         data-fr="&laquo;&nbsp;L'excellence n'est pas un acte, mais une habitude.&nbsp;&raquo;"
+         data-en="&laquo;&nbsp;Excellence is not an act, but a habit.&nbsp;&raquo;">
+        &laquo;&nbsp;L'excellence n'est pas un acte, mais une habitude.&nbsp;&raquo;
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary lang" data-fr="Me contacter" data-en="Get in touch">
+          <i class="fas fa-paper-plane"></i>&nbsp;Me contacter
+        </a>
+        <a href="#projects" class="btn-secondary lang" data-fr="Voir mes projets" data-en="View projects">
+          <i class="fas fa-code"></i>&nbsp;Voir mes projets
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Défiler">
+      <span class="lang" data-fr="Défiler" data-en="Scroll">Défiler</span>
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ================================================ À PROPOS ================================================ -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="section-tag reveal">À propos</p>
+      <h2 class="section-title reveal">
+        <span class="lang" data-fr="Qui " data-en="Who ">Qui </span>
+        <em class="lang" data-fr="suis-je ?" data-en="am I?">suis-je ?</em>
+      </h2>
+      <div class="about-grid">
+
+        <!-- Texte biographique -->
+        <div class="about-text reveal">
+          <p class="lang"
+             data-fr="Étudiant à l'<strong>IFOAD — Université Joseph Ki-Zerbo</strong>, je me spécialise en Réseaux &amp; Systèmes avec une appétence forte pour le développement logiciel et les nouvelles technologies."
+             data-en="A student at <strong>IFOAD — Joseph Ki-Zerbo University</strong>, I specialize in Networks &amp; Systems with a strong interest in software development and emerging technologies.">
+            Étudiant à l'<strong>IFOAD — Université Joseph Ki-Zerbo</strong>, je me spécialise en Réseaux &amp; Systèmes avec une appétence forte pour le développement logiciel et les nouvelles technologies.
+          </p>
+          <p class="lang"
+             data-fr="J'ai concrétisé mes apprentissages à travers des projets en <strong>Python, Java, HTML/CSS/JS</strong> et en traitement du signal. En juin 2024, j'ai complété ma formation par une <strong>certification Microsoft Bureautique</strong>, puis obtenu le <strong>certificat SEINAR</strong> en Intelligence Artificielle et Calcul Quantique."
+             data-en="I've applied my learning through projects in <strong>Python, Java, HTML/CSS/JS</strong> and signal processing. In June 2024, I completed a <strong>Microsoft Office certification</strong>, then earned the <strong>SEINAR certificate</strong> in Artificial Intelligence and Quantum Computing.">
+            J'ai concrétisé mes apprentissages à travers des projets en <strong>Python, Java, HTML/CSS/JS</strong> et en traitement du signal. En juin 2024, j'ai complété ma formation par une <strong>certification Microsoft Bureautique</strong>, puis obtenu le <strong>certificat SEINAR</strong> en Intelligence Artificielle et Calcul Quantique.
+          </p>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-num" data-target="6">0</span>
+              <span class="stat-label lang" data-fr="Projets" data-en="Projects">Projets</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="3">0</span>
+              <span class="stat-label lang" data-fr="Certifications" data-en="Certifications">Certifications</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="7">0</span>
+              <span class="stat-label lang" data-fr="Technologies" data-en="Technologies">Technologies</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte formations & certifications -->
+        <div class="cert-card reveal reveal-delay-2">
+
+          <div class="cert-item cert-featured">
+            <div class="cert-icon cert-icon--gold"><i class="fas fa-award"></i></div>
+            <div class="cert-info">
+              <h4>Certificat SEINAR</h4>
+              <p class="lang" data-fr="IA Moderne &amp; Calcul Quantique" data-en="Modern AI &amp; Quantum Computing">IA Moderne &amp; Calcul Quantique</p>
+              <span class="cert-badge lang" data-fr="Certification officielle" data-en="Official certification">Certification officielle</span>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon cert-icon--ms"><i class="fab fa-microsoft"></i></div>
+            <div class="cert-info">
+              <h4 class="lang" data-fr="Formation Bureautique Microsoft" data-en="Microsoft Office Training">Formation Bureautique Microsoft</h4>
+              <p class="lang" data-fr="Word · Excel · PowerPoint · Juin 2024" data-en="Word · Excel · PowerPoint · June 2024">Word · Excel · PowerPoint · Juin 2024</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="cert-info">
+              <h4 class="lang" data-fr="IFOAD — Univ. Ki-Zerbo" data-en="IFOAD — Ki-Zerbo Univ.">IFOAD — Univ. Ki-Zerbo</h4>
+              <p class="lang" data-fr="Réseaux &amp; Systèmes · En cours" data-en="Networks &amp; Systems · Ongoing">Réseaux &amp; Systèmes · En cours</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ EXPERTISE ================================================ -->
+  <section id="skills">
+    <div class="section-inner">
+      <p class="section-tag reveal">Expertise</p>
+      <h2 class="section-title reveal">
+        <span class="lang" data-fr="Domaines de " data-en="Fields of ">Domaines de </span>
+        <em class="lang" data-fr="compétences" data-en="expertise">compétences</em>
+      </h2>
+      <div class="skills-grid">
+
+        <!-- Réseaux & Systèmes -->
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-card-icon"><i class="fas fa-network-wired"></i></div>
+          <h3 class="lang" data-fr="Réseaux &amp; Systèmes" data-en="Networks &amp; Systems">Réseaux &amp; Systèmes</h3>
+          <ul class="skill-list">
+            <li>Architecture TCP/IP &amp; Modèle OSI</li>
+            <li class="lang" data-fr="Admin Linux (Ubuntu/Debian) &amp; Windows Server" data-en="Linux Admin (Ubuntu/Debian) &amp; Windows Server">Admin Linux (Ubuntu/Debian) &amp; Windows Server</li>
+            <li class="lang" data-fr="Sécurité des infrastructures &amp; protocoles" data-en="Infrastructure security &amp; protocols">Sécurité des infrastructures &amp; protocoles</li>
+            <li class="lang" data-fr="Traitement du signal numérique" data-en="Digital signal processing">Traitement du signal numérique</li>
+          </ul>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>TCP/IP</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-level="90%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Linux Admin</span><span>82%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-level="82%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Développement -->
+        <div class="skill-card reveal reveal-delay-2">
+          <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+          <h3 class="lang" data-fr="Développement" data-en="Development">Développement</h3>
+          <ul class="skill-list">
+            <li>Python (Web, Data, CLI)</li>
+            <li>Java (JDBC, POO avancée)</li>
+            <li>HTML5 · CSS3 · JavaScript</li>
+            <li>MySQL · SQL</li>
+          </ul>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Python</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-level="85%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Java</span><span>78%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-level="78%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modélisation & IA -->
+        <div class="skill-card reveal reveal-delay-3">
+          <div class="skill-card-icon"><i class="fas fa-microchip"></i></div>
+          <h3 class="lang" data-fr="Modélisation &amp; IA" data-en="Modelling &amp; AI">Modélisation &amp; IA</h3>
+          <ul class="skill-list">
+            <li>UML &amp; MERISE</li>
+            <li class="lang" data-fr="IA &amp; Calcul Quantique (SEINAR)" data-en="AI &amp; Quantum Computing (SEINAR)">IA &amp; Calcul Quantique (SEINAR)</li>
+            <li class="lang" data-fr="Analyse de données" data-en="Data analysis">Analyse de données</li>
+            <li class="lang" data-fr="Automatisation de systèmes" data-en="System automation">Automatisation de systèmes</li>
+          </ul>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>UML / MERISE</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-level="80%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>IA</span><span>65%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-level="65%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bureautique Microsoft -->
+        <div class="skill-card reveal reveal-delay-4">
+          <div class="skill-card-icon skill-card-icon--ms"><i class="fab fa-microsoft"></i></div>
+          <h3 class="lang" data-fr="Bureautique Microsoft" data-en="Microsoft Office">Bureautique Microsoft</h3>
+          <ul class="skill-list">
+            <li class="lang" data-fr="Word — Mise en page &amp; styles avancés" data-en="Word — Advanced layout &amp; styles">Word — Mise en page &amp; styles avancés</li>
+            <li class="lang" data-fr="Excel — Tableurs, formules &amp; graphiques" data-en="Excel — Spreadsheets, formulas &amp; charts">Excel — Tableurs, formules &amp; graphiques</li>
+            <li class="lang" data-fr="PowerPoint — Présentations professionnelles" data-en="PowerPoint — Professional presentations">PowerPoint — Présentations professionnelles</li>
+            <li class="lang" data-fr="Certifié · Juin 2024" data-en="Certified · June 2024">Certifié · Juin 2024</li>
+          </ul>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Word / PowerPoint</span><span>88%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-level="88%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Excel</span><span>82%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-level="82%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ Projet ================================================ -->
+  <section id="projects">
+    <div class="section-inner">
+      <p class="section-tag reveal">Projet</p>
+      <h2 class="section-title reveal">
+        <em class="lang" data-fr="Projets" data-en="Projects">Projets</em>
+        <span class="lang" data-fr=" &amp; Réalisations" data-en=" &amp; Work"> &amp; Réalisations</span>
+      </h2>
+
+      <!-- Filtres -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">
+          <span class="lang" data-fr="Tous" data-en="All">Tous</span>
+        </button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="java">Java</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="signal">Signal</button>
+        <button class="filter-btn" data-filter="ia">IA / Quantique</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- 1. Moteur de recherche historique — Python -->
+        <div class="project-card reveal reveal-delay-1" data-category="python">
+          <div class="project-img project-img--python">
+            <div class="project-img-inner"><i class="fas fa-search"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Python</span>
+            <h3 class="lang" data-fr="Moteur de Recherche Historique" data-en="Historical Search Engine">Moteur de Recherche Historique</h3>
+            <p class="lang"
+               data-fr="Moteur de recherche en Python pour indexer et interroger des données historiques. Algorithmes de recherche, structures de données et interface CLI."
+               data-en="Python search engine to index and query historical data. Search algorithms, data structures, and CLI interface.">
+              Moteur de recherche en Python pour indexer et interroger des données historiques. Algorithmes de recherche, structures de données et interface CLI.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/JEANCLAUDESOMDA" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Gestion École — Java JDBC -->
+        <div class="project-card reveal reveal-delay-2" data-category="java">
+          <div class="project-img project-img--java">
+            <div class="project-img-inner"><i class="fab fa-java"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Java · JDBC · MySQL</span>
+            <h3 class="lang" data-fr="Gestion École d'Été — JDBC" data-en="Summer School Management — JDBC">Gestion École d'Été — JDBC</h3>
+            <p class="lang"
+               data-fr="Application desktop Java connectée à MySQL via JDBC. CRUD complet : inscription des élèves, gestion des cours, des enseignants et des notes."
+               data-en="Java desktop app connected to MySQL via JDBC. Full CRUD: student enrollment, course &amp; teacher management, grade tracking.">
+              Application desktop Java connectée à MySQL via JDBC. CRUD complet : inscription des élèves, gestion des cours, des enseignants et des notes.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/JEANCLAUDESOMDA" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Projet Web HTML/CSS/JS -->
+        <div class="project-card reveal reveal-delay-3" data-category="web">
+          <div class="project-img project-img--web">
+            <div class="project-img-inner"><i class="fab fa-html5"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">HTML5 · CSS3 · JavaScript</span>
+            <h3 class="lang" data-fr="Projet Développement Web" data-en="Web Development Project">Projet Développement Web</h3>
+            <p class="lang"
+               data-fr="Site web dynamique en HTML5, CSS3 et JavaScript vanilla : interface responsive, animations CSS et interactions utilisateur avancées."
+               data-en="Dynamic website in HTML5, CSS3, and vanilla JavaScript: responsive layout, CSS animations, and advanced user interactions.">
+              Site web dynamique en HTML5, CSS3 et JavaScript vanilla : interface responsive, animations CSS et interactions utilisateur avancées.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/JEANCLAUDESOMDA" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Projet Web Python -->
+        <div class="project-card reveal reveal-delay-1" data-category="python web">
+          <div class="project-img project-img--python">
+            <div class="project-img-inner"><i class="fab fa-python"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Python · Web</span>
+            <h3 class="lang" data-fr="Application Web Python" data-en="Python Web Application">Application Web Python</h3>
+            <p class="lang"
+               data-fr="Application web côté serveur en Python : routage HTTP, traitement de formulaires, accès base de données et rendu de templates dynamiques."
+               data-en="Server-side Python web app: HTTP routing, form processing, database access, and dynamic template rendering.">
+              Application web côté serveur en Python : routage HTTP, traitement de formulaires, accès base de données et rendu de templates dynamiques.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/JEANCLAUDESOMDA" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Traitement du Signal -->
+        <div class="project-card reveal reveal-delay-2" data-category="signal">
+          <div class="project-img project-img--signal">
+            <div class="project-img-inner"><i class="fas fa-wave-square"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Traitement du Signal · Numérique</span>
+            <h3 class="lang" data-fr="Traitement du Signal Numérique" data-en="Digital Signal Processing">Traitement du Signal Numérique</h3>
+            <p class="lang"
+               data-fr="Étude et simulation du traitement numérique du signal : échantillonnage, transformée de Fourier, filtrage et analyse spectrale appliqués aux transmissions de données."
+               data-en="Digital signal processing study: sampling, Fourier transform, filtering, and spectral analysis applied to data transmissions.">
+              Étude et simulation du traitement numérique du signal : échantillonnage, transformée de Fourier, filtrage et analyse spectrale appliqués aux transmissions de données.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fas fa-file-pdf"></i> Rapport</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. SEINAR — IA & Quantique (carte mise en avant) -->
+        <div class="project-card project-card--featured reveal reveal-delay-3" data-category="ia">
+          <div class="project-img project-img--seinar">
+            <div class="project-img-inner"><i class="fas fa-atom"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">IA · Calcul Quantique · SEINAR</span>
+            <div class="project-level project-level--cert">
+              <i class="fas fa-award"></i>
+              <span class="lang" data-fr="Certificat de participation" data-en="Certificate of participation">Certificat de participation</span>
+            </div>
+            <h3 class="lang" data-fr="SEINAR — IA &amp; Calcul Quantique" data-en="SEINAR — AI &amp; Quantum Computing">SEINAR — IA &amp; Calcul Quantique</h3>
+            <p class="lang"
+               data-fr="Immersion intensive certifiée : fondamentaux de l'IA moderne (machine learning, réseaux de neurones) et informatique quantique (qubits, algorithmes quantiques)."
+               data-en="Certified intensive immersion: modern AI fundamentals (machine learning, neural networks) and quantum computing (qubits, quantum algorithms).">
+              Immersion intensive certifiée : fondamentaux de l'IA moderne (machine learning, réseaux de neurones) et informatique quantique (qubits, algorithmes quantiques).
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link project-link--gold"><i class="fas fa-certificate"></i> Certificat</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ PARCOURS / TIMELINE ================================================ -->
+  <section id="parcours">
+    <div class="section-inner">
+      <p class="section-tag reveal">Parcours</p>
+      <h2 class="section-title reveal">
+        <span class="lang" data-fr="Mon " data-en="My ">Mon </span>
+        <em class="lang" data-fr="parcours" data-en="journey">parcours</em>
+      </h2>
+
+      <div class="timeline">
+
+        <!-- Certification Microsoft Bureautique — point marquant -->
+        <div class="tl-item reveal reveal-delay-2">
+          <div class="tl-dot tl-dot--microsoft"></div>
+          <p class="tl-date tl-date--cert">
+            <i class="fab fa-microsoft"></i>
+            <span class="lang" data-fr="Juin 2024 · Certification" data-en="June 2024 · Certification">Juin 2024 · Certification</span>
+          </p>
+          <h3 class="lang" data-fr="Formation Bureautique Microsoft" data-en="Microsoft Office Training">Formation Bureautique Microsoft</h3>
+          <p class="lang"
+             data-fr="Formation certifiée couvrant la suite Microsoft Office : traitement de texte avancé (Word), tableurs et fonctions (Excel), et création de présentations professionnelles (PowerPoint)."
+             data-en="Certified training on the Microsoft Office suite: advanced word processing (Word), spreadsheets and formulas (Excel), professional presentations (PowerPoint).">
+            Formation certifiée couvrant la suite Microsoft Office : traitement de texte avancé (Word), tableurs et fonctions (Excel), et création de présentations professionnelles (PowerPoint).
+          </p>
+        </div>
+
+        <!-- Inscription IFOAD -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <p class="tl-date"><span class="lang" data-fr="Début du cursus universitaire" data-en="Start of university studies">Début du cursus universitaire - (2024)</span></p>
+          <h3 class="lang" data-fr="IFOAD — Université Joseph Ki-Zerbo" data-en="IFOAD — Joseph Ki-Zerbo University">IFOAD — Université Joseph Ki-Zerbo</h3>
+          <p class="lang"
+             data-fr="Inscription en Licence Réseaux &amp; Systèmes à l'IFOAD. Début de la maîtrise des architectures réseau (TCP/IP, OSI), de l'administration Linux/Windows et des langages Python et Java."
+             data-en="Enrolled in the Networks &amp; Systems degree at IFOAD. Started mastering network architectures (TCP/IP, OSI), Linux/Windows administration, Python, and Java.">
+            Inscription en Licence Réseaux &amp; Systèmes à l'IFOAD. Début de la maîtrise des architectures réseau (TCP/IP, OSI), de l'administration Linux/Windows et des langages Python et Java.
+          </p>
+        </div>
+
+        <!-- Projet Python -->
+        <div class="tl-item reveal reveal-delay-1">
+          <div class="tl-dot"></div>
+          <p class="tl-date"><span class="lang" data-fr="Projet académique — Python" data-en="Academic project — Python">Projet académique — Python - (2025)</span></p>
+          <h3 class="lang" data-fr="Moteur de Recherche Historique" data-en="Historical Search Engine">Moteur de Recherche Historique</h3>
+          <p class="lang"
+             data-fr="Développement d'un moteur de recherche en Python pour l'indexation et l'interrogation de données historiques. Maîtrise des algorithmes de tri/recherche, structures de données et interface CLI."
+             data-en="Built a Python search engine for indexing and querying historical data. Mastery of sorting/search algorithms, data structures, and CLI interface.">
+            Développement d'un moteur de recherche en Python pour l'indexation et l'interrogation de données historiques. Maîtrise des algorithmes de tri/recherche, structures de données et interface CLI.
+          </p>
+        </div>
+
+        <!-- SEINAR — point d'orgue final -->
+        <div class="tl-item reveal reveal-delay-2">
+          <div class="tl-dot tl-dot--gold"></div>
+          <p class="tl-date tl-date--cert">
+            <i class="fas fa-award"></i>
+            <span class="lang" data-fr="Certification SEINAR" data-en="SEINAR Certification">Certification SEINAR - (Decembre 2025)</span>
+          </p>
+          <h3 class="lang"
+              data-fr="🏆 Intelligence Artificielle &amp; Calcul Quantique"
+              data-en="🏆 Artificial Intelligence &amp; Quantum Computing">
+            🏆 Intelligence Artificielle &amp; Calcul Quantique
+          </h3>
+          <p class="lang"
+             data-fr="Certification officielle obtenue à l'issue du programme SEINAR : immersion en IA moderne (machine learning, réseaux de neurones) et en informatique quantique (qubits, algorithmes quantiques, portes logiques)."
+             data-en="Official certification from the SEINAR program: immersion in modern AI (machine learning, neural networks) and quantum computing (qubits, quantum algorithms, logic gates).">
+            Certification officielle obtenue à l'issue du programme SEINAR : immersion en IA moderne (machine learning, réseaux de neurones) et en informatique quantique (qubits, algorithmes quantiques, portes logiques).
+          </p>
+        </div>
+
+        <!-- Projet Java -->
+        <div class="tl-item reveal reveal-delay-2">
+          <div class="tl-dot"></div>
+          <p class="tl-date"><span class="lang" data-fr="Projet académique — Java" data-en="Academic project — Java">Projet académique — Java - (2025-2026)</span></p>
+          <h3 class="lang" data-fr="Gestion École d'Été — JDBC &amp; MySQL" data-en="Summer School Management — JDBC &amp; MySQL">Gestion École d'Été — JDBC &amp; MySQL</h3>
+          <p class="lang"
+             data-fr="Application Java avec connexion JDBC à MySQL. CRUD complet pour la gestion d'élèves, cours et enseignants. Approfondissement de la POO et des transactions SQL."
+             data-en="Java application with JDBC connection to MySQL. Full CRUD for students, courses and teachers. In-depth OOP and SQL transactions.">
+            Application Java avec connexion JDBC à MySQL. CRUD complet pour la gestion d'élèves, cours et enseignants. Approfondissement de la POO et des transactions SQL.
+          </p>
+        </div>
+
+        <!-- Projet Web Front-end -->
+        <div class="tl-item reveal reveal-delay-1">
+          <div class="tl-dot"></div>
+          <p class="tl-date"><span class="lang" data-fr="Projet académique — Web Front-end" data-en="Academic project — Web Front-end">Projet académique — Web Front-end (2026)</span></p>
+          <h3 class="lang" data-fr="Développement Web — HTML5, CSS3, JavaScript" data-en="Web Development — HTML5, CSS3, JavaScript">Développement Web — HTML5, CSS3, JavaScript</h3>
+          <p class="lang"
+             data-fr="Conception d'un site web dynamique avec interface responsive, animations CSS avancées et manipulation du DOM en JavaScript."
+             data-en="Dynamic website with responsive layout, advanced CSS animations, and JavaScript DOM manipulation.">
+            Conception d'un site web dynamique avec interface responsive, animations CSS avancées et manipulation du DOM en JavaScript.
+          </p>
+        </div>
+
+        <!-- Projet Web Python -->
+        <div class="tl-item reveal reveal-delay-3">
+          <div class="tl-dot"></div>
+          <p class="tl-date"><span class="lang" data-fr="Projet académique — Web Back-end" data-en="Academic project — Web Back-end">Projet académique — Web Back-end - (2026)</span></p>
+          <h3 class="lang" data-fr="Application Web Python" data-en="Python Web Application">Application Web Python</h3>
+          <p class="lang"
+             data-fr="Application web serveur en Python : routage HTTP, traitement de formulaires, interaction avec une base de données et rendu de templates dynamiques."
+             data-en="Server-side Python web app: HTTP routing, form processing, database interaction, and dynamic template rendering.">
+            Application web serveur en Python : routage HTTP, traitement de formulaires, interaction avec une base de données et rendu de templates dynamiques.
+          </p>
+        </div>
+
+        <!-- Projet Signal -->
+        <div class="tl-item reveal reveal-delay-1">
+          <div class="tl-dot"></div>
+          <p class="tl-date"><span class="lang" data-fr="Projet académique — Signal" data-en="Academic project — Signal">Projet académique — Signal - (2026)</span></p>
+          <h3 class="lang" data-fr="Traitement du Signal Numérique" data-en="Digital Signal Processing">Traitement du Signal Numérique</h3>
+          <p class="lang"
+             data-fr="Étude du traitement numérique du signal appliqué aux télécommunications : échantillonnage, transformée de Fourier discrète, filtrage numérique et analyse spectrale."
+             data-en="Digital signal processing applied to telecommunications: sampling, DFT, digital filtering, and spectral analysis.">
+            Étude du traitement numérique du signal appliqué aux télécommunications : échantillonnage, transformée de Fourier discrète, filtrage numérique et analyse spectrale.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ CONTACT ================================================ -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-tag reveal">Contact</p>
+      <h2 class="section-title reveal">
+        <span class="lang" data-fr="Travaillons " data-en="Let's work ">Travaillons </span>
+        <em class="lang" data-fr="ensemble" data-en="together">ensemble</em>
+      </h2>
+
+      <div class="contact-grid">
+
+        <!-- Infos & canaux -->
+        <div>
+          <div class="contact-info reveal">
+            <h3>
+              <span class="lang" data-fr="Prêt à collaborer" data-en="Ready to collaborate">Prêt à collaborer</span><br>
+              <em class="lang" data-fr="sur votre projet ?" data-en="on your project?">sur votre projet ?</em>
+            </h3>
+            <p class="lang"
+               data-fr="Projet réseau, application web, analyse de données ou toute autre collaboration — je suis disponible pour échanger."
+               data-en="Network project, web application, data analysis, or any other collaboration — I'm available to discuss.">
+              Projet réseau, application web, analyse de données ou toute autre collaboration — je suis disponible pour échanger.
+            </p>
+          </div>
+
+          <div class="contact-channels reveal reveal-delay-1">
+            <a href="https://github.com/JEANCLAUDESOMDA" target="_blank" class="contact-channel">
+              <div class="contact-channel-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-channel-info">
+                <small>GitHub</small>
+                <span>JEANCLAUDESOMDA</span>
+              </div>
+            </a>
+            <a href="https://wa.me/22667911789" target="_blank" class="contact-channel">
+              <div class="contact-channel-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-channel-info">
+                <small>WhatsApp</small>
+                <span>+226 67 91 17 89</span>
+              </div>
+            </a>
+            <a href="mailto:jeanclaudesomda664@gmail.com" class="contact-channel">
+              <div class="contact-channel-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-channel-info">
+                <small>Email</small>
+                <span class="lang" data-fr="Envoyer un email" data-en="Send an email">Envoyer un email</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulaire connecté au backend Flask -->
+        <div class="reveal reveal-delay-2">
+          <form class="contact-form" id="contact-form" novalidate>
+
+            <div class="form-group">
+              <label for="inp-name" class="lang" data-fr="Votre nom *" data-en="Your name *">Votre nom *</label>
+              <input type="text" id="inp-name" name="name"
+                     placeholder="Veuillez entrer votre nom" required minlength="2" maxlength="100" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="inp-email" class="lang" data-fr="Email *" data-en="Email *">Email *</label>
+              <input type="email" id="inp-email" name="email"
+                     placeholder="votre@email.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="inp-subject" class="lang" data-fr="Sujet" data-en="Subject">Sujet</label>
+              <input type="text" id="inp-subject" name="subject"
+                     placeholder="Collaboration, stage, projet..." autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="inp-message" class="lang" data-fr="Message *" data-en="Message *">Message *</label>
+              <textarea id="inp-message" name="message"
+                        placeholder="Votre message..." required minlength="10"></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              <i class="fas fa-paper-plane"></i>
+              <span class="lang" data-fr="Envoyer" data-en="Send">Envoyer</span>
+            </button>
+
+            <!-- Retour succès -->
+            <div class="form-feedback form-feedback--success" id="form-success">
+              <i class="fas fa-check-circle"></i>
+              <span class="fb-text lang"
+                    data-fr="Message envoyé ! Je vous répondrai dans les 48h."
+                    data-en="Message sent! I'll reply within 48 hours.">
+                Message envoyé ! Je vous répondrai dans les 48h.
+              </span>
+            </div>
+
+            <!-- Retour erreur -->
+            <div class="form-feedback form-feedback--error" id="form-error">
+              <i class="fas fa-exclamation-circle"></i>
+              <span class="fb-text">Une erreur est survenue.</span>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ FOOTER ================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">JC Somda</span>
+      <p>© 2026 Winzew Jean-Claude Somda &nbsp;</p>
+    </div>
+  </footer>
+
+  <button id="scrollToTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
